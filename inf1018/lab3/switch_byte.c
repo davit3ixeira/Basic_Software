@@ -1,14 +1,13 @@
 #include <stdio.h>
 
-unsigned char switch_byte(unsigned char x){
-  unsigned char a, b;
-  a = x/16;
-  b = x%16;
-  return b*16+a;
+unsigned char switch_byte(unsigned char x) {
+  a = (x << 4) | (x >> 4);
+  return a;
 }
 
-int main() {
-  unsigned char a = switch_byte(0xAB);
-  printf("%x\n", a);
+int main(){
+
+  printf("%02x\n", switch_byte(0xAB));
+
   return 0;
 }

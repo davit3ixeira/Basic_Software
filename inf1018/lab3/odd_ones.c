@@ -1,21 +1,20 @@
 #include <stdio.h>
 
 int odd_ones(unsigned int x) {
-  unsigned char *p;
-  p = &x;
-  int a = 0;
+  int c = 0;
 
-  for(; *p; p++){
-    if(*p == 1){
-        a++;
-    }
+  while (x) {
+      c += x & 1;
+      x >>= 1;
   }
 
-  return a - (a/2)*2;
+  return c & 1;
 }
 
-int main() {
+int main(){
+
   printf("%x tem numero %s de bits\n",0x01010101,odd_ones(0x01010101) ? "impar":"par");
   printf("%x tem numero %s de bits\n",0x01030101,odd_ones(0x01030101) ? "impar":"par");
+  
   return 0;
 }

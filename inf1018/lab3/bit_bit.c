@@ -1,23 +1,14 @@
 #include <stdio.h>
-int main(void) {
+
+int main(){
   unsigned int x = 0x87654321;
   unsigned int y, z;
-  unsigned char *pz, *py;
 
-  y = x;
-  py = &y;
-  py++;
+  y = x & 0xFF;
 
-  for(int i = 0; i < 3; i++){
-    *py = 0;
-    py++;
-  }
-
-  z = x;
-  pz = &z;
-
-  pz += 3;
-  *pz = 0xFF;     
+  z = x | 0xFF000000;
 
   printf("%08x %08x\n", y, z);
+
+  return 0;
 }
