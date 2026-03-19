@@ -1,0 +1,4 @@
+1- dump(&c, sizeof(c)) = 150 - 96
+   dump(&s, sizeof(s)) = -3 - fd \n -3 - ff
+   dump(&i, sizeof(i)) = -151 - ff \n -151 - ff \n -151 - ff \n -151 - 69
+

@@ -1,0 +1,15 @@
+1- a) O programa utiliza uma função dump que utiliza um ponteiro em um inteiro 'i' e conforme ele diminui é printado um endereço de memória (um byte) e seu valor emm hexadecimal. Um inteiro possui 4 bytes, sendo ordenados de forma em que o algarismo de maior relevância é possicionado primeiro, ou seja, o primeiro a ser printado.  
+
+b) Um long possui 8 bytes.
+
+c) Um short possui 2 bytes.
+
+d) Um char possui 1 byte.
+
+e) Ao rodar o programa percebe-se que o código da tabela ASCII dos caracteres 'A', ' ', '\n' e '$' (ao converter de hexadecimal para decimal modificando o código) são respectivamente 65, 32, 10, 36.
+
+2- a) A função string2num recebe uma string e retorna um inteiro, faz isso de forma que declara um inteiro 'a' e para cada caractere da string é adicionado ao 'a' o valor de 10*a somado com o valor do caractere na tabela ASCII diminuido de '0' que é equivalenete a 48, o que corresponde o inteiro referente a string.
+
+b) Para que funcione para qualquer base basta modificar o multiplicador inteiro 10 pelo número da base, dito isso, os resultados dos testes são respectivamente 511 e 777.
+
+c) Com esse esquema a maior base possivel seria 36 uma vez que há 26 letras no alfabeto e 9 algarismos.
