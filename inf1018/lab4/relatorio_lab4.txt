@@ -2,3 +2,9 @@
    dump(&s, sizeof(s)) = -3 - fd \n -3 - ff
    dump(&i, sizeof(i)) = -151 - ff \n -151 - ff \n -151 - ff \n -151 - 69
 
+2- dump(&l, sizeof(l)) = -32765 - 80 \n -32765 - 03; -32765 em hexadecimal é equivalnte a 8003 e um short possui 2 bytes, cada byte é equivalente a 2 caracteres em hexadecimal
+   dump(&k, sizeof(k)) = 32771 - 00 \n 32771 - 00 \n 32771 - 80 \n 32771 - 03; 32771 em hexadecimal é equivalnte a 00008003 e um unsigned short possui 4 bytes, cada byte é equivalente a 2 caracteres em hexadecimal
+
+4- Quando ffffffff é interpretado como um inteiro com sinal esse valor é -1, porque o bit mais significativo é 1, indicando um número negativo. No segundo caso, x é um unsigned int, ffffffff em hexadecimal é 4294967295 em decimal, pois é o maior valor possível para um inteiro sem sinal de 32 bits.
+
+5- Quando a variável signed char = -1 é representada como 11111111 em binário, ao declarar sc = unsigned int ui, ui terá o valor binário equivalente ao sc para os 8 bits menos significativos, enquanto os outros bits mais significativos se tornam todos 0: 11111111 00000000 00000000 00000000.
